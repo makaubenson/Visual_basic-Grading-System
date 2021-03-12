@@ -1,0 +1,11 @@
+E:\school\vs code\class\class\obj\Debug\ResolveAssemblyReference.cache
+E:\school\vs code\class\class\obj\Debug\class.Resources.resources
+E:\school\vs code\class\class\obj\Debug\class.vbproj.GenerateResource.Cache
+E:\school\vs code\class\class\bin\Debug\class.exe
+E:\school\vs code\class\class\bin\Debug\class.pdb
+E:\school\vs code\class\class\bin\Debug\class.xml
+E:\school\vs code\class\class\obj\Debug\class.exe
+E:\school\vs code\class\class\obj\Debug\class.xml
+E:\school\vs code\class\class\obj\Debug\class.pdb
+E:\school\vs code\class\class\obj\Debug\class.group.resources
+E:\school\vs code\class\class\obj\Debug\class.project.resources
