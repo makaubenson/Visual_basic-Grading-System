@@ -34,7 +34,7 @@ Partial Class group
         Me.ListBox1.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 16
-        Me.ListBox1.Items.AddRange(New Object() {"  Benson Makau            Adm   CIT/00046/019  -Group Leader", "  Lisper Ndegwa            Adm   CIT/00012/019", "  Alexander Karanja       Adm   CIT/00178/019", "  Faith Chepkoech         Adm    CIT/00005/019", "  Juma Mutie                  Adm   CIT/00063/19", "  Stephen Mwau             Adm    CIT/00111/019", "  James Omolo               Adm    CIT/00243/019"})
+        Me.ListBox1.Items.AddRange(New Object() {"  Benson Makau            Adm   CIT/00046/019  ", "  Lisper Ndegwa            Adm   CIT/00012/019", "  Alexander Karanja       Adm   CIT/00178/019", "  Faith Chepkoech         Adm    CIT/00005/019", "  Juma Mutie                  Adm   CIT/00063/19", "  Stephen Mwau             Adm    CIT/00111/019", "  James Omolo               Adm    CIT/00243/019"})
         Me.ListBox1.Location = New System.Drawing.Point(11, 147)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(412, 212)

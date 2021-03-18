@@ -1,0 +1,12 @@
+database connection string 
+name= studentdatabaseConnectionString
+Provider=Microsoft.ACE.OLEDB.12.0;Data Source="E:\school\vb code\class\studentdatabase.accdb"
+
+
+//new
+Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\studentdatabase.accdb
+
+name studentset
+
+second
+Provider=Microsoft.ACE.OLEDB.12.0;Data Source="E:\school\vb code\class\studentdatabase.accdb"

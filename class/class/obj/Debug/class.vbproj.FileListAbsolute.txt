@@ -9,3 +9,16 @@ E:\school\vs code\class\class\obj\Debug\class.xml
 E:\school\vs code\class\class\obj\Debug\class.pdb
 E:\school\vs code\class\class\obj\Debug\class.group.resources
 E:\school\vs code\class\class\obj\Debug\class.project.resources
+E:\school\vb code\class\class\obj\Debug\class.exe
+E:\school\vb code\class\class\obj\Debug\class.xml
+E:\school\vb code\class\class\obj\Debug\class.pdb
+E:\school\vb code\class\class\bin\Debug\class.exe
+E:\school\vb code\class\class\bin\Debug\class.pdb
+E:\school\vb code\class\class\bin\Debug\class.xml
+E:\school\vb code\class\class\obj\Debug\ResolveAssemblyReference.cache
+E:\school\vb code\class\class\obj\Debug\class.group.resources
+E:\school\vb code\class\class\obj\Debug\class.project.resources
+E:\school\vb code\class\class\obj\Debug\class.Resources.resources
+E:\school\vb code\class\class\obj\Debug\class.vbproj.GenerateResource.Cache
+E:\school\vb code\class\class\bin\Debug\class.exe.config
+E:\school\vb code\class\class\obj\Debug\class.database.resources

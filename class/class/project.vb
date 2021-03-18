@@ -1,5 +1,14 @@
-﻿Public Class project
+﻿Imports System.Data.OleDb
+'importing the database preferences
+Public Class project
+    Dim provider As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
+    Dim datafile As String = "E:\school\vb code\class\studentdatabase.accdb"
+    Dim constring As String = provider & datafile
+    Dim myconnection As OleDbConnection = New OleDbConnection
+    Dim str As String
 
+
+    Dim stdid As Integer
     Dim studentname As String = ""  'String to store the student name
     'Mark 1,2 and 3 are used to store the values the user inputs for first mark,Second mark and third Mark 
     'in the form
@@ -38,66 +47,175 @@
     Dim numbertwo As Integer
     Dim numberthree As Integer
 
+    Dim i As Integer
+
+    Dim average As Decimal
+    Dim sum As Integer
+
+
 
     Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
 
     End Sub
 
     Private Sub savedatabtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles savedatabtn.Click
+        'starting up the connection to database
+
+        If (listboxmain.Items.Count = 0) Then
+            MessageBox.Show("Add Details First Then Process The Inputs", "step skipped")
+            Return
+
+        End If
+        Try
+            myconnection.ConnectionString = constring
+            myconnection.Open()
+            str = "Insert into students([studentID],[studentName],[markone],[marktwo],[markthree],[sum],[average]) values (?,?,?,?,?,?,?)"
+            Dim cmd As OleDbCommand = New OleDbCommand(str, myconnection)
+            cmd.Parameters.Add(New OleDbParameter("studentID", CType(studentidtxt.Text, Integer)))
+            cmd.Parameters.Add(New OleDbParameter("studentName", CType(username.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("markone", CType(marka.Text, Integer)))
+            cmd.Parameters.Add(New OleDbParameter("marktwo", CType(markb.Text, Integer)))
+            cmd.Parameters.Add(New OleDbParameter("markthree", CType(markc.Text, Integer)))
+            cmd.Parameters.Add(New OleDbParameter("sum", CType(sum, Integer)))
+            cmd.Parameters.Add(New OleDbParameter("average", CType(average, Integer)))
 
 
-        If (username.Text <> "") Then    'checks if username is empty
+            Try
 
-            If (marka.Text <> "") Then        'checks if mark 1 input is empty
-                If (markb.Text <> "") Then      'checks if mark 2 input is empty
-                    If (markc.Text <> "") Then     'checks if mark 3 input is empty
+                i = cmd.ExecuteNonQuery
+                cmd.Dispose()
+                If i > 0 Then
 
-                        'if all are not empty the below code runs
-                        'try catch to handle user input errors
-                        Try
-                            markinputone = CInt(marka.Text)  ' cast user mark 1 input to the interger markinputone
+                    studentidtxt.Clear()
+                    username.Clear()
+                    marka.Clear()
+                    markb.Clear()
+                    markc.Clear()
+                    state = "invalid"
+                    MsgBox("Record ADDED successfully!")
 
-                            state = "valid"                  'declares the state valid for controlling if all input is entered
-                        Catch ex As Exception
-                            'shows a message box if a char instead of a number is entered
-                            MessageBox.Show("You entered a character instead of a number in mark1", "eroor")
+                Else
+                    MsgBox("Record has Not been Added!")
+                End If
 
-                        End Try
-
-
-
-                        Try
-
-                            markinputtwo = CInt(markb.Text)    ' cast user mark 2 input to the interger markinputtwo
-
-                            state = "valid"
-                        Catch ex As Exception
-                            MessageBox.Show("You entered a character instead of a number in mark2", "eroor")
-                        End Try
-
-
-                        Try
-
-                            markinputthree = CInt(markc.Text)    ' cast user mark 3 input to the interger markinputhree
-                            state = "valid"
-                        Catch ex As Exception
-                            MessageBox.Show("You entered a character instead of a number in mark3", "eroor")
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
 
 
-                        End Try
-                        'end of if statement.The statement above is used for confirming is user has filled in 
-                        ' all inputs and that the user hasnt filled in a value that cant be used ie character
+        myconnection.Close()
+
+    End Sub
+
+    Private Sub deletebtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles deletebtn.Click
+        Try
+
+            'deletes a selected item in the list box
+            listboxmain.Items.RemoveAt(listboxmain.SelectedIndex)
+        Catch ex As Exception
+            MessageBox.Show("Nothing has been Selected")
+        End Try
 
 
+
+
+
+    End Sub
+
+    Private Sub marka_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles marka.TextChanged
+
+    End Sub
+
+    Private Sub Label5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label5.Click
+
+    End Sub
+
+    Private Sub username_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles username.TextChanged
+
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        group.Show()
+
+    End Sub
+
+    Private Sub databaselink_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles databaselink.LinkClicked
+
+        database.Show()
+    End Sub
+
+    Private Sub project_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles studentidtxt.TextChanged
+
+    End Sub
+
+    Private Sub Label7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles h.Click
+
+    End Sub
+
+    Private Sub processbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles processbtn.Click
+        If (studentidtxt.Text <> "") Then  'check if student id is empty
+            If (username.Text <> "") Then    'checks if username is empty
+                If (marka.Text <> "") Then        'checks if mark 1 input is empty
+                    If (markb.Text <> "") Then      'checks if mark 2 input is empty
+                        If (markc.Text <> "") Then     'checks if mark 3 input is empty
+
+                            'if all are not empty the below code runs
+                            'try catch to handle user input errors
+                            Try
+                                markinputone = CInt(marka.Text)  ' cast user mark 1 input to the interger markinputone
+
+                                state = "valid"                  'declares the state valid for controlling if all input is entered
+                            Catch ex As Exception
+                                'shows a message box if a char instead of a number is entered
+                                MessageBox.Show("You entered a character instead of a number in mark1", "eroor")
+
+                            End Try
+
+
+
+                            Try
+
+                                markinputtwo = CInt(markb.Text)    ' cast user mark 2 input to the interger markinputtwo
+
+                                state = "valid"
+                            Catch ex As Exception
+                                MessageBox.Show("You entered a character instead of a number in mark2", "eroor")
+                            End Try
+
+
+                            Try
+
+                                markinputthree = CInt(markc.Text)    ' cast user mark 3 input to the interger markinputhree
+                                state = "valid"
+                            Catch ex As Exception
+                                MessageBox.Show("You entered a character instead of a number in mark3", "eroor")
+
+
+
+                            End Try
+                            'end of if statement.The statement above is used for confirming is user has filled in 
+                            ' all inputs and that the user hasnt filled in a value that cant be used ie character
+
+
+
+                        End If
 
                     End If
 
                 End If
 
             End If
-
         End If
+
+
 
 
 
@@ -153,6 +271,7 @@
         If state = "valid" Then   'runs if all conditions are set ie state is initializes
 
             'gets the name and the three marks from user input
+            stdid = studentidtxt.Text
             Name = username.Text
             mark1 = marka.Text
             mark2 = markb.Text
@@ -163,6 +282,7 @@
 
 
             'adds the following items to the list box, name and mark 1,2,3 
+            listboxmain.Items.Add("Student ID: " & stdid)
             listboxmain.Items.Add("Student name: " & Name)
             listboxmain.Items.Add("Mark one: " & mark1)
             listboxmain.Items.Add("Mark two: " & mark2)
@@ -185,11 +305,11 @@
             If numberone = winnerone Then
                 firstwinner = numberone
                 middle = numbertwo
-                
+
             Else
                 firstwinner = numbertwo
                 middle = numberone
-               
+
             End If
             'the function below find the biggest number between,( the results gotten by comparing Mark 1
             'and Mark 2 / the first winner)  and Mark 3.
@@ -208,8 +328,9 @@
                 listboxmain.Items.Add("Second Largest Mark : " & middlewinner)
                 listboxmain.Items.Add("Smallest Mark: " & finallooser)
                 'used to find the average and sum  of the top two biggest marks
-                Dim average As Decimal = (finallwinner + middlewinner) / 2
-                Dim sum As Integer = (finallwinner + middlewinner)
+                average = (finallwinner + middlewinner) / 2
+
+                sum = (finallwinner + middlewinner)
 
                 'add sum and average to list box
                 listboxmain.Items.Add("Sum: " & sum)
@@ -243,12 +364,16 @@
                 listboxmain.Items.Add("Smallest Mark: " & finallooser)
 
                 'used to find the average and sum  of the top two biggest marks
-                Dim average As Decimal = (finallwinner + middlewinner) / 2
-                Dim sum As Integer = (finallwinner + middlewinner)
+                average = (finallwinner + middlewinner) / 2
+                sum = (finallwinner + middlewinner)
+
 
                 'add sum and average to list box
                 listboxmain.Items.Add("Sum: " & sum)
                 listboxmain.Items.Add("Average Mark: " & average)
+
+
+                state = "invalid"
 
 
             End If
@@ -259,35 +384,22 @@
             'Displays if an input field is found to be empty  by the if statements
             MessageBox.Show("Error: One of the input fields Has an Error!!.Please Confirm", "WARNING")
         End If
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        studentidtxt.Clear()
+        username.Clear()
+        marka.Clear()
+        markb.Clear()
+        markc.Clear()
+        state = "invalid"
+
+        listboxmain.Items.Clear()
+
 
     End Sub
 
-    Private Sub deletebtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles deletebtn.Click
-        Try
-            'deletes a selected item in the list box
-            listboxmain.Items.RemoveAt(listboxmain.SelectedIndex)
-        Catch ex As Exception
-
-        End Try
-
-
-
-    End Sub
-
-    Private Sub marka_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles marka.TextChanged
-
-    End Sub
-
-    Private Sub Label5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label5.Click
-
-    End Sub
-
-    Private Sub username_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles username.TextChanged
-
-    End Sub
-
-    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        group.Show()
+    Private Sub Label7_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label7.Click
 
     End Sub
 End Class
