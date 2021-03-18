@@ -10,8 +10,4 @@
     Private Sub Label1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
 
     End Sub
-
-    Private Sub GroupLeadertxt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
 End Class

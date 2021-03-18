@@ -3,14 +3,13 @@
 Public Class database
 
     Dim provider As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
-    Dim datafile As String = "F:\cloned\visual-basic-project\class\studentdatabase.accdb"
+    Dim datafile As String = "E:\school\vb code\class\studentdatabase.accdb"
     Dim constring As String = provider & datafile
     Dim myconnection As OleDbConnection = New OleDbConnection
     Dim str As String
     Dim i As Integer
     Dim state As String
     Dim id As Integer
-    Dim stdid As Integer
 
 
     Private Sub database_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -47,20 +46,20 @@ Public Class database
         If (deleteid.Text <> "") Then
             Try
                 Try
-                    stdid = deleteid.Text     'id = CInt(deleteid.Text)    
+                    id = CInt(deleteid.Text)
 
                     state = "valid"
 
 
                 Catch ex As Exception
-                    MessageBox.Show("Please enter a number", "Error")
+                    MessageBox.Show("YOU Did Not Enter A NUMBER", "input error")
 
                 End Try
 
 
                 If (state = "valid") Then
 
-                    str = "Delete from students WHERE studentID = " & stdid
+                    str = "Delete from students WHERE studentID = "
 
                     Dim cmd As OleDbCommand = New OleDbCommand(str, myconnection)
                     cmd.Connection = myconnection
@@ -89,7 +88,7 @@ Public Class database
             myconnection.Close()
 
         Else
-            MessageBox.Show("Please type in a Student ID to delete!", "Error")
+            MessageBox.Show("PLEASE INPUT A STUDENT ID TO DELETE", "error")
         End If
         myconnection.Close()
 

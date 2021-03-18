@@ -2,14 +2,13 @@
 'importing the database preferences
 Public Class project
     Dim provider As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
-    Dim datafile As String = "F:\cloned\visual-basic-project\class\studentdatabase.accdb"
+    Dim datafile As String = "E:\school\vb code\class\studentdatabase.accdb"
     Dim constring As String = provider & datafile
     Dim myconnection As OleDbConnection = New OleDbConnection
     Dim str As String
 
 
     Dim stdid As Integer
-
     Dim studentname As String = ""  'String to store the student name
     'Mark 1,2 and 3 are used to store the values the user inputs for first mark,Second mark and third Mark 
     'in the form
@@ -63,7 +62,7 @@ Public Class project
         'starting up the connection to database
 
         If (listboxmain.Items.Count = 0) Then
-            MessageBox.Show("Add Details First Then Process The Inputs", "Warning!!")
+            MessageBox.Show("Add Details First Then Process The Inputs", "step skipped")
             Return
 
         End If
@@ -93,10 +92,10 @@ Public Class project
                     markb.Clear()
                     markc.Clear()
                     state = "invalid"
-                    MessageBox.Show("The Record has been added successfully!", "Success")
+                    MsgBox("Record ADDED successfully!")
 
                 Else
-                    MsgBox("Record has Not been Added!", "Warning")
+                    MsgBox("Record has Not been Added!")
                 End If
 
             Catch ex As Exception
@@ -118,7 +117,7 @@ Public Class project
             'deletes a selected item in the list box
             listboxmain.Items.RemoveAt(listboxmain.SelectedIndex)
         Catch ex As Exception
-            MessageBox.Show("Nothing has been Selected", "Warning")
+            MessageBox.Show("Nothing has been Selected")
         End Try
 
 
@@ -139,7 +138,7 @@ Public Class project
 
     End Sub
 
-    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lblGroupMembers.LinkClicked
+    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         group.Show()
 
     End Sub
@@ -162,7 +161,7 @@ Public Class project
     End Sub
 
     Private Sub processbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles processbtn.Click
-        If (studentidtxt.Text <> "") Then  'checks if student id is empty
+        If (studentidtxt.Text <> "") Then  'check if student id is empty
             If (username.Text <> "") Then    'checks if username is empty
                 If (marka.Text <> "") Then        'checks if mark 1 input is empty
                     If (markb.Text <> "") Then      'checks if mark 2 input is empty
@@ -176,7 +175,7 @@ Public Class project
                                 state = "valid"                  'declares the state valid for controlling if all input is entered
                             Catch ex As Exception
                                 'shows a message box if a char instead of a number is entered
-                                MessageBox.Show("You entered a character instead of a number in mark1", "Error")
+                                MessageBox.Show("You entered a character instead of a number in mark1", "eroor")
 
                             End Try
 
@@ -188,7 +187,7 @@ Public Class project
 
                                 state = "valid"
                             Catch ex As Exception
-                                MessageBox.Show("You entered a character instead of a number in mark2", "Error")
+                                MessageBox.Show("You entered a character instead of a number in mark2", "eroor")
                             End Try
 
 
@@ -197,7 +196,7 @@ Public Class project
                                 markinputthree = CInt(markc.Text)    ' cast user mark 3 input to the interger markinputhree
                                 state = "valid"
                             Catch ex As Exception
-                                MessageBox.Show("You entered a character instead of a number in mark3", "Error")
+                                MessageBox.Show("You entered a character instead of a number in mark3", "eroor")
 
 
 
@@ -224,11 +223,11 @@ Public Class project
             ' Below statements are used to check if input field for Mark 1 doesnt contain a value less than 0 or 
             ' a value above 100
             If markinputone < 0 Then
-                MessageBox.Show("Mark one is less than 0", "Error")
+                MessageBox.Show("Mark one is less than 0", "error")
                 state = ""    'will reset state to invalid so as not to run the calculation
             End If
             If markinputone > 100 Then
-                MessageBox.Show("Mark one is Greater than than 100", "Error")
+                MessageBox.Show("Mark one is Greater than than 100", "error")
                 state = ""          'will reset state to invalid so as not to run the calculation
             End If
         Catch ex As Exception
@@ -241,11 +240,11 @@ Public Class project
             ' Below statements are used to check if input field for Mark 2 doesnt contain a value less than 0 or 
             ' a value above 100
             If markinputtwo < 0 Then
-                MessageBox.Show("Mark two is less than 0", "Error")
+                MessageBox.Show("Mark two is less than 0", "error")
                 state = ""
             End If
             If markinputtwo > 100 Then
-                MessageBox.Show("Mark two is Greater than than 100", "Error")
+                MessageBox.Show("Mark two is Greater than than 100", "error")
                 state = ""
             End If
         Catch ex As Exception
@@ -257,11 +256,11 @@ Public Class project
             ' Below statements are used to check if input field for Mark 3 doesnt contain a value less than 0 or 
             ' a value above 100
             If markinputthree < 0 Then
-                MessageBox.Show("Mark three is less than 0", "Error")
+                MessageBox.Show("Mark three is less than 0", "error")
                 state = ""
             End If
             If markinputthree > 100 Then
-                MessageBox.Show("Mark three is Greater than than 100", "Error")
+                MessageBox.Show("Mark three is Greater than than 100", "error")
                 state = ""
             End If
         Catch ex As Exception
@@ -269,7 +268,7 @@ Public Class project
         End Try
 
 
-        If state = "valid" Then   'runs if all conditions are set i.e state is initializes
+        If state = "valid" Then   'runs if all conditions are set ie state is initializes
 
             'gets the name and the three marks from user input
             stdid = studentidtxt.Text
@@ -383,7 +382,7 @@ Public Class project
 
         Else
             'Displays if an input field is found to be empty  by the if statements
-            MessageBox.Show("One of the input fields Has an Error!", "WARNING")
+            MessageBox.Show("Error: One of the input fields Has an Error!!.Please Confirm", "WARNING")
         End If
     End Sub
 
@@ -401,10 +400,6 @@ Public Class project
     End Sub
 
     Private Sub Label7_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label7.Click
-
-    End Sub
-
-    Private Sub listboxmain_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles listboxmain.SelectedIndexChanged
 
     End Sub
 End Class

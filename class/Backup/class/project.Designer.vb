@@ -22,26 +22,26 @@ Partial Class project
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.username = New System.Windows.Forms.TextBox()
-        Me.marka = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.markb = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.markc = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.savedatabtn = New System.Windows.Forms.Button()
-        Me.listboxmain = New System.Windows.Forms.ListBox()
-        Me.deletebtn = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.lblGroupMembers = New System.Windows.Forms.LinkLabel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.databaselink = New System.Windows.Forms.LinkLabel()
-        Me.studentidtxt = New System.Windows.Forms.TextBox()
-        Me.h = New System.Windows.Forms.Label()
-        Me.processbtn = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.username = New System.Windows.Forms.TextBox
+        Me.marka = New System.Windows.Forms.TextBox
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.markb = New System.Windows.Forms.TextBox
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.markc = New System.Windows.Forms.TextBox
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.savedatabtn = New System.Windows.Forms.Button
+        Me.listboxmain = New System.Windows.Forms.ListBox
+        Me.deletebtn = New System.Windows.Forms.Button
+        Me.Label5 = New System.Windows.Forms.Label
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.databaselink = New System.Windows.Forms.LinkLabel
+        Me.studentidtxt = New System.Windows.Forms.TextBox
+        Me.h = New System.Windows.Forms.Label
+        Me.processbtn = New System.Windows.Forms.Button
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.Label7 = New System.Windows.Forms.Label
         Me.SuspendLayout()
         '
         'Label1
@@ -116,11 +116,11 @@ Partial Class project
         '
         Me.savedatabtn.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.savedatabtn.ForeColor = System.Drawing.Color.Blue
-        Me.savedatabtn.Location = New System.Drawing.Point(134, 283)
+        Me.savedatabtn.Location = New System.Drawing.Point(53, 318)
         Me.savedatabtn.Name = "savedatabtn"
-        Me.savedatabtn.Size = New System.Drawing.Size(87, 32)
+        Me.savedatabtn.Size = New System.Drawing.Size(316, 32)
         Me.savedatabtn.TabIndex = 8
-        Me.savedatabtn.Text = "Save Record"
+        Me.savedatabtn.Text = "Save Data To Database"
         Me.savedatabtn.UseVisualStyleBackColor = True
         '
         'listboxmain
@@ -128,7 +128,7 @@ Partial Class project
         Me.listboxmain.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.listboxmain.FormattingEnabled = True
         Me.listboxmain.ItemHeight = 19
-        Me.listboxmain.Location = New System.Drawing.Point(393, 30)
+        Me.listboxmain.Location = New System.Drawing.Point(506, 30)
         Me.listboxmain.Name = "listboxmain"
         Me.listboxmain.Size = New System.Drawing.Size(494, 232)
         Me.listboxmain.TabIndex = 9
@@ -137,7 +137,7 @@ Partial Class project
         '
         Me.deletebtn.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.deletebtn.ForeColor = System.Drawing.Color.Red
-        Me.deletebtn.Location = New System.Drawing.Point(616, 268)
+        Me.deletebtn.Location = New System.Drawing.Point(736, 311)
         Me.deletebtn.Name = "deletebtn"
         Me.deletebtn.Size = New System.Drawing.Size(99, 39)
         Me.deletebtn.TabIndex = 10
@@ -148,23 +148,21 @@ Partial Class project
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(407, 280)
+        Me.Label5.Location = New System.Drawing.Point(658, 283)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(160, 14)
+        Me.Label5.Size = New System.Drawing.Size(251, 14)
         Me.Label5.TabIndex = 11
-        Me.Label5.Text = "To Delete a Field,Select it First"
+        Me.Label5.Text = "Select data to Remove then press delete button"
         '
-        'lblGroupMembers
+        'LinkLabel1
         '
-        Me.lblGroupMembers.AutoSize = True
-        Me.lblGroupMembers.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.lblGroupMembers.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.lblGroupMembers.Location = New System.Drawing.Point(91, 433)
-        Me.lblGroupMembers.Name = "lblGroupMembers"
-        Me.lblGroupMembers.Size = New System.Drawing.Size(103, 13)
-        Me.lblGroupMembers.TabIndex = 12
-        Me.lblGroupMembers.TabStop = True
-        Me.lblGroupMembers.Text = "GROUP MEMBERS"
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(150, 446)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(134, 13)
+        Me.LinkLabel1.TabIndex = 12
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "VIEW GROUP MEMBERS"
         '
         'Label6
         '
@@ -179,12 +177,12 @@ Partial Class project
         'databaselink
         '
         Me.databaselink.AutoSize = True
-        Me.databaselink.Location = New System.Drawing.Point(613, 395)
+        Me.databaselink.Location = New System.Drawing.Point(738, 446)
         Me.databaselink.Name = "databaselink"
-        Me.databaselink.Size = New System.Drawing.Size(64, 13)
+        Me.databaselink.Size = New System.Drawing.Size(97, 13)
         Me.databaselink.TabIndex = 14
         Me.databaselink.TabStop = True
-        Me.databaselink.Text = "DATABASE"
+        Me.databaselink.Text = "OPEN DATABASE"
         '
         'studentidtxt
         '
@@ -205,22 +203,21 @@ Partial Class project
         '
         'processbtn
         '
-        Me.processbtn.BackColor = System.Drawing.SystemColors.Highlight
         Me.processbtn.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.processbtn.Location = New System.Drawing.Point(134, 230)
+        Me.processbtn.Location = New System.Drawing.Point(53, 255)
         Me.processbtn.Name = "processbtn"
-        Me.processbtn.Size = New System.Drawing.Size(91, 32)
+        Me.processbtn.Size = New System.Drawing.Size(316, 32)
         Me.processbtn.TabIndex = 17
         Me.processbtn.Text = "Process Input"
-        Me.processbtn.UseVisualStyleBackColor = False
+        Me.processbtn.UseVisualStyleBackColor = True
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Red
-        Me.Button1.Location = New System.Drawing.Point(84, 348)
+        Me.Button1.Location = New System.Drawing.Point(55, 373)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(200, 32)
+        Me.Button1.Size = New System.Drawing.Size(314, 32)
         Me.Button1.TabIndex = 18
         Me.Button1.Text = "Clear Input Fields"
         Me.Button1.UseVisualStyleBackColor = True
@@ -229,7 +226,7 @@ Partial Class project
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(436, 361)
+        Me.Label7.Location = New System.Drawing.Point(564, 379)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(436, 19)
         Me.Label7.TabIndex = 19
@@ -248,7 +245,7 @@ Partial Class project
         Me.Controls.Add(Me.h)
         Me.Controls.Add(Me.databaselink)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.lblGroupMembers)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.deletebtn)
         Me.Controls.Add(Me.listboxmain)
@@ -279,7 +276,7 @@ Partial Class project
     Friend WithEvents listboxmain As System.Windows.Forms.ListBox
     Friend WithEvents deletebtn As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents lblGroupMembers As System.Windows.Forms.LinkLabel
+    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents databaselink As System.Windows.Forms.LinkLabel
     Friend WithEvents studentidtxt As System.Windows.Forms.TextBox

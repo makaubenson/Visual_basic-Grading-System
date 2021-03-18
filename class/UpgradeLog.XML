@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="class">
+</Property><Property Name="Solution File" Value="F:\cloned\visual-basic-project\class\class.sln">
+</Property><Property Name="User Options File" Value="F:\cloned\visual-basic-project\class\class.suo">
+</Property><Property Name="Date" Value="Thursday, March 18, 2021">
+</Property><Property Name="Time" Value="7:47 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="class.sln" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class.sln">
+</Event><Event ErrorLevel="0" Project="" Source="class.suo" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class.suo">
+</Event><Event ErrorLevel="0" Project="class" Source="class\class.vbproj" Description="Project file successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\class.vbproj">
+</Event><Event ErrorLevel="0" Project="class" Source="class\class.vbproj.user" Description="Project user file successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\class.vbproj.user">
+</Event><Event ErrorLevel="0" Project="class" Source="class\database.Designer.vb" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\database.Designer.vb">
+</Event><Event ErrorLevel="0" Project="class" Source="class\database.vb" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\database.vb">
+</Event><Event ErrorLevel="0" Project="class" Source="class\project.vb" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\project.vb">
+</Event><Event ErrorLevel="0" Project="class" Source="class\project.Designer.vb" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\project.Designer.vb">
+</Event><Event ErrorLevel="0" Project="class" Source="class\group.Designer.vb" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\group.Designer.vb">
+</Event><Event ErrorLevel="0" Project="class" Source="class\group.vb" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\group.vb">
+</Event><Event ErrorLevel="0" Project="class" Source="class\My Project\AssemblyInfo.vb" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\My Project\AssemblyInfo.vb">
+</Event><Event ErrorLevel="0" Project="class" Source="class\My Project\Application.Designer.vb" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\My Project\Application.Designer.vb">
+</Event><Event ErrorLevel="0" Project="class" Source="class\My Project\Resources.Designer.vb" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\My Project\Resources.Designer.vb">
+</Event><Event ErrorLevel="0" Project="class" Source="class\My Project\Settings.Designer.vb" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\My Project\Settings.Designer.vb">
+</Event><Event ErrorLevel="0" Project="class" Source="class\app.config" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\app.config">
+</Event><Event ErrorLevel="0" Project="class" Source="class\My Project\Application.myapp" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\My Project\Application.myapp">
+</Event><Event ErrorLevel="0" Project="class" Source="class\My Project\Settings.settings" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\My Project\Settings.settings">
+</Event><Event ErrorLevel="0" Project="class" Source="class\database.resx" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\database.resx">
+</Event><Event ErrorLevel="0" Project="class" Source="class\group.resx" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\group.resx">
+</Event><Event ErrorLevel="0" Project="class" Source="class\project.resx" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\project.resx">
+</Event><Event ErrorLevel="0" Project="class" Source="class\My Project\Resources.resx" Description="File successfully backed up as F:\cloned\visual-basic-project\class\Backup\class\My Project\Resources.resx">
+</Event><Event ErrorLevel="0" Project="class" Source="class\class.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="class" Source="class\class.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="class.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="class.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="class" Source="class\class.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

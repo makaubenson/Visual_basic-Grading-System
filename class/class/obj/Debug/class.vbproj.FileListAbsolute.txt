@@ -22,3 +22,15 @@ E:\school\vb code\class\class\obj\Debug\class.Resources.resources
 E:\school\vb code\class\class\obj\Debug\class.vbproj.GenerateResource.Cache
 E:\school\vb code\class\class\bin\Debug\class.exe.config
 E:\school\vb code\class\class\obj\Debug\class.database.resources
+F:\cloned\visual-basic-project\class\class\bin\Debug\class.exe.config
+F:\cloned\visual-basic-project\class\class\obj\Debug\class.exe
+F:\cloned\visual-basic-project\class\class\obj\Debug\class.xml
+F:\cloned\visual-basic-project\class\class\obj\Debug\class.pdb
+F:\cloned\visual-basic-project\class\class\bin\Debug\class.exe
+F:\cloned\visual-basic-project\class\class\bin\Debug\class.pdb
+F:\cloned\visual-basic-project\class\class\bin\Debug\class.xml
+F:\cloned\visual-basic-project\class\class\obj\Debug\class.database.resources
+F:\cloned\visual-basic-project\class\class\obj\Debug\class.group.resources
+F:\cloned\visual-basic-project\class\class\obj\Debug\class.project.resources
+F:\cloned\visual-basic-project\class\class\obj\Debug\class.Resources.resources
+F:\cloned\visual-basic-project\class\class\obj\Debug\class.vbproj.GenerateResource.Cache

@@ -22,12 +22,11 @@ Partial Class group
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.lblGroupLeader = New System.Windows.Forms.Label()
+        Me.ListBox1 = New System.Windows.Forms.ListBox
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label4 = New System.Windows.Forms.Label
         Me.SuspendLayout()
         '
         'ListBox1
@@ -35,10 +34,10 @@ Partial Class group
         Me.ListBox1.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 16
-        Me.ListBox1.Items.AddRange(New Object() {"1. Alexander Karanja      " & Global.Microsoft.VisualBasic.ChrW(9) & "Adm   " & Global.Microsoft.VisualBasic.ChrW(9) & "CIT/00178/019", "2.Lisper Ndegwa           " & Global.Microsoft.VisualBasic.ChrW(9) & "Adm   " & Global.Microsoft.VisualBasic.ChrW(9) & "CIT/00012/019", "3.Faith Chepkoech         " & Global.Microsoft.VisualBasic.ChrW(9) & "Adm   " & Global.Microsoft.VisualBasic.ChrW(9) & "CIT/00005/019", "4.Benson Makau            " & Global.Microsoft.VisualBasic.ChrW(9) & "Adm   " & Global.Microsoft.VisualBasic.ChrW(9) & "CIT/00046/019  ", "5.Juma Mutie                  " & Global.Microsoft.VisualBasic.ChrW(9) & "Adm   " & Global.Microsoft.VisualBasic.ChrW(9) & "CIT/00063/19", "6. Stephen Mwau           " & Global.Microsoft.VisualBasic.ChrW(9) & "Adm    " & Global.Microsoft.VisualBasic.ChrW(9) & "CIT/00111/019", "7. James Omolo              " & Global.Microsoft.VisualBasic.ChrW(9) & "Adm   " & Global.Microsoft.VisualBasic.ChrW(9) & "CIT/00243/019"})
+        Me.ListBox1.Items.AddRange(New Object() {"  Benson Makau            Adm   CIT/00046/019  ", "  Lisper Ndegwa            Adm   CIT/00012/019", "  Alexander Karanja       Adm   CIT/00178/019", "  Faith Chepkoech         Adm    CIT/00005/019", "  Juma Mutie                  Adm   CIT/00063/19", "  Stephen Mwau             Adm    CIT/00111/019", "  James Omolo               Adm    CIT/00243/019"})
         Me.ListBox1.Location = New System.Drawing.Point(11, 147)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(412, 148)
+        Me.ListBox1.Size = New System.Drawing.Size(412, 212)
         Me.ListBox1.TabIndex = 0
         '
         'Label1
@@ -49,7 +48,7 @@ Partial Class group
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(121, 18)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = " CIT/00178/019"
+        Me.Label1.Text = " CIT/00046/019"
         '
         'Label2
         '
@@ -64,11 +63,10 @@ Partial Class group
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(12, 62)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(103, 15)
+        Me.Label3.Size = New System.Drawing.Size(89, 15)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Group Leader :"
         '
@@ -82,22 +80,11 @@ Partial Class group
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Group Members :"
         '
-        'lblGroupLeader
-        '
-        Me.lblGroupLeader.AutoSize = True
-        Me.lblGroupLeader.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGroupLeader.Location = New System.Drawing.Point(173, 87)
-        Me.lblGroupLeader.Name = "lblGroupLeader"
-        Me.lblGroupLeader.Size = New System.Drawing.Size(155, 20)
-        Me.lblGroupLeader.TabIndex = 5
-        Me.lblGroupLeader.Text = "Alexander Karanja"
-        '
         'group
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(435, 503)
-        Me.Controls.Add(Me.lblGroupLeader)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -114,5 +101,4 @@ Partial Class group
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents lblGroupLeader As System.Windows.Forms.Label
 End Class
